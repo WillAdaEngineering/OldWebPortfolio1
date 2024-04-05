@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon-me.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="assets/WillAdamsLogo.png" class="icon">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Fullstack Developer</p>
+            <h1>Hi, I'm <span>Will Adams</span><br>From Dallas, TX</h1>
+        </div>
+    </div>
+</div>
+<!-------------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="assets/icon-me.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <h2 class="who-am-i">Who Am I?</h2>
+                <p>  I was born and raised in Irving, Texas. I am a Computer Engineering Major at the University of Texas at Arlington<br>
+                    who has been learning to write programs and scripts since middle school.
+                </p>
+                <h2 class="hobbies">Hobbies</h2>
+                <p> If I am not playing video games, I am on the computer developing something to keep my creativity<br>
+                    from eating me alive. I attempt to learn the development of anything from machine learning to games and<br>
+                    applications. Occasionally I like to mess with digital art as well, but when I grow restless from sitting<br>
+                    in front of a screen all day, I also like to play basketball with friends and strangers.
+                </p>
+                <h2 class="additional">Extra</h2>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('languages')">Languages</p>
+                    <p class="tab-links" onclick="opentab('software')">Software</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="languages">
+                    <ul>
+                        <li><span>HTML</span><br>Bar</li>
+                        <li><span>CSS</span><br>Bar</li>
+                        <li><span>JavaScript</span><br>Bar</li>
+                        <li><span>Python</span><br>Bar</li>
+                        <li><span>C++</span><br>Bar</li>
+                        <li><span>MATLAB</span><br>Bar</li>
+                        <li><span>Swift</span><br>Bar</li>
+                        <li><span>Dart</span><br>Bar</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="software">
+                    <ul>
+                        <li><span>A?</span><br>XYZ</li>
+                        <li><span>B?</span><br>XYZ</li>
+                        <li><span>C?</span><br>XYZ</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>A2?</span><br>XYZ2</li>
+                        <li><span>B2?</span><br>XYZ2</li>
+                        <li><span>C2?</span><br>XYZ2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------Experiences------------->
+<div id="experiences">
+    <div class="container">
+        <h1 class="sub-title">My Experiences</h1>
+        <div class="experiences-list">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
